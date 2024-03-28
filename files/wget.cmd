@@ -15,10 +15,10 @@ IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
 @REM --> if error flag set, we do not have admin.
 
 if '%errorlevel%' NEQ '0' (
-    echo Requesting administrative privileges...`
+    echo Requesting administrative privileges...
     goto UACPrompt
-) else ( goto gotAdmin )`
-
+) else ( goto gotAdmin )
+pause
 :UACPrompt
     echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
     set params= %*
