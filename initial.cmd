@@ -17,4 +17,4 @@ powershell .\wget.cmd
 @REM cd "%INITIALPATH%"
 
 @rem del initial.cmd
-@REM del initial.cmd
+del initial.cmd
